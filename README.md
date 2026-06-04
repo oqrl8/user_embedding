@@ -1,6 +1,6 @@
 # Todo Embedding Cache Examples
 
-https://www.ibm.com/think/topics/multi-tenant?utm_source=copilot.com
+https://en.wikipedia.org/wiki/Multitenancy?utm_source=copilot.com
 
 This repo contains two implementations of a tenant-aware embedding cache for a todo list:
 - `node-service` — Node.js + Express + Redis
