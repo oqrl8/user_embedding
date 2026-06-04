@@ -1,0 +1,19 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      redis:
+        image: redis:7-alpine
+        ports: ['6379:6379']
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Node service
+        run: |
+          cd node-service
+          npm ci
+      - name: Build Python service
+        run: |
+          cd python-service
+          pip install -r <(echo "flask\nredis")
