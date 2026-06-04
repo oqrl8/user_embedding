@@ -16,4 +16,4 @@ jobs:
       - name: Build Python service
         run: |
           cd python-service
-          pip install -r <(echo "flask\nredis")
+          python -m pip install flask redis
